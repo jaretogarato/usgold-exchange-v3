@@ -1,0 +1,331 @@
+$grey-text: #6d6e71;
+
+body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.bold-hover:hover {
+  font-weight: 400;
+}
+
+.ui.secondary.pointing.menu{
+  border-bottom: none !important;
+}
+
+.navlink, .navlink:visited {
+  color: #444;
+  -webkit-transition: color 0.5s; /* Safari */
+  transition: color 0.5s;
+}
+
+.navlink:hover {
+  color: #1fccdc;
+  background-color: transparent;
+  -webkit-transition: color 0.5s; /* Safari */
+  transition: color 0.5s;
+}
+
+.navlink-current, .navlink-current:visited {
+  color: #1fccdc;
+  -webkit-transition: color 0.5s; /* Safari */
+  transition: color 0.5s;
+}
+
+.navlink-current:hover {
+  color: #fff;
+  background-color: transparent;
+  -webkit-transition: color 0.5s; /* Safari */
+  transition: color 0.5s;
+}
+
+.contain {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.cookieConsent{
+  position: relative !important;
+  top: 120px !important;
+  z-index: 999999;
+}
+
+.navlink-error {
+  color: #F00;
+}
+
+.logo-nav-wrap {
+  padding: 15px 0 0;
+  margin: 0;
+  float: left;
+}
+
+.logo-nav {
+  width: 300px;
+  border: none;
+}
+
+.logo-nav:hover, .logo-nav:visited {
+  color: none !important;
+  background-color: transparent !important;
+}
+
+/* a:visited {
+  color: inherit;
+  background-color: transparent;
+} */
+/*** Home Page ***/
+.hero-spacer {
+  height: 0px;
+  width: 100%;
+}
+
+//.ui.grid > .row {
+//  padding: 0px !important;
+//}
+
+.grey-text {
+  color: $grey-text;
+}
+
+.grey-bg {
+  background: #eaebee;
+}
+
+.home-hero-text {
+  margin-top: 106px;
+  .hero-secondary {
+    margin-top: 47px;
+  }
+  h1, h2 {
+    font-family: "myriad-pro", sans-serif;
+    color: #fff;
+    font-weight: normal;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 24px !important;
+
+  }
+  h2 {
+    line-height: 14px;
+    font-size: 30px;
+    font-weight: 100;
+
+  }
+}
+
+.hero-wrapper {
+  .hero-sub-row {
+    background-image: url("../assets/images/liberty.png");
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center bottom;
+    background-attachment: fixed;
+    p {
+      font-size: 14px;
+      color: $grey-text;
+
+    }
+    .hero-sub {
+      padding-top: 44px;
+      h2 {
+
+        color: $grey-text;
+        font-family: "myriad-pro", sans-serif;
+        font-weight: normal;
+      }
+    }
+    .hero-sub-grid {
+      .top20 {
+        height: 20%;
+      }
+      height: 44vh;
+    }
+  }
+}
+
+.panel-header-text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.aller {
+  font-family: "myriad-pro", sans-serif;
+}
+
+.security-is-paramount {
+  color: #dcdbdb;
+  h3 {
+    color: #dcdbdb;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 35px;
+  }
+  h4 {
+    margin-top: 36px !important;
+    margin-bottom: 22px;
+    color: #dcdbdb;
+    text-transform: uppercase;
+  }
+  p {
+    color: #dcdbdb;
+  }
+  background-image: url("../assets/images/security-is-paramount-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.power-of-stability {
+  h3 {
+    margin-top: -.4vh !important;
+  }
+  h4 {
+    margin-top: 1.7vh !important;
+    text-align: center;
+    color: #606060;
+  }
+  hr {
+    margin-top: -.3vh;
+  }
+  img {
+    margin-top: 1vh;
+  }
+}
+
+.solid-gold-solid-company {
+  .gold-bars {
+    margin-top: 20px;
+  }
+  h3 {
+    margin-top: 12px !important;
+  }
+  hr {
+    margin-top: -15px !important;
+  }
+}
+
+.buy-spend-hodl-it {
+  .easy-to-buy {
+    margin-top: 18px !important;
+  }
+  h4 {
+    margin-top: 8px !important;
+  }
+  hr {
+    margin-top: -14px;
+    margin-bottom: 15px;
+  }
+}
+
+//@media(max-width: 1200px) {
+//  .hero-column {
+//    h1 {
+//      font-size: 50px;
+//    }
+//    h2 {
+//      font-size: 35px;
+//    }
+//  }
+//}
+//
+@media(max-width: 1200px) {
+  .home-hero-text {
+    h1 {
+      font-size: 45px;
+      line-height: 5px !important;
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 12px !important;
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  .hero-wrapper {
+    .hero-spacer {
+      width: 100%;
+    }
+  }
+  .home-hero-text {
+    h1 {
+      font-size: 40px;
+      line-height: 15px !important;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 12px !important;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .hero-spacer {
+    width: 100%;
+  }
+  .home-hero-text {
+    h1 {
+      font-size: 45px;
+      line-height: 20px;
+    }
+    h2 {
+      font-size: 25px;
+      line-height: 15px;
+    }
+  }
+
+  .hero-sub-row {
+    .hero-sub-grid {
+      height: 100%;
+      overflow: visible;
+      .top20, .top70 {
+        height: auto;
+        overflow: visible;
+      }
+      .hero-sub {
+        height: auto;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+@media(max-width: 455px) {
+  .hero-wrapper {
+    .hero-row {
+
+      .hero-secondary {
+        margin-top: 6vh;
+      }
+    }
+  }
+  .home-hero-text {
+    h1 {
+      letter-spacing: 0px;
+      font-size: 33px;
+      line-height: 18px;
+    }
+    h2 {
+      letter-spacing: 0px;
+      font-size: 20px;
+      line-height: 12px;
+    }
+  }
+}
+
+
+
