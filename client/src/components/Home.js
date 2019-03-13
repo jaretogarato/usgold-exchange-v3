@@ -152,10 +152,10 @@ class Home extends Component {
               <HhTextContainer className={"home-hero-text"}>
                 <h1>US GOLD</h1>
                 <h2>Your Private Gold Bullion Dealer.</h2>
-                <div className={'hero-secondary'}>
-                  <h2 style={{color:'white', lineHeight:'38px'}}>We make buying, storing, and selling gold safe and convenient.</h2>
 
-                </div>
+                  <h2>We make buying, storing, and selling</h2>
+                  <h2>gold safe and convenient.</h2>
+
               </HhTextContainer>
               <Fade>
                 <HhImageContainer bgImage={USGoldToken}/>
