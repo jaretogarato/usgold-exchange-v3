@@ -1,4 +1,4 @@
-# USGNode
+# USG INC
 
 Client:
 `npm run start`
