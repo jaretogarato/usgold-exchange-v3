@@ -89,15 +89,15 @@ class About extends Component {
                 <Grid.Column width={1}/>
                 <Grid.Column width={14}>
                   <OpenH3 color='white'>
-                    Based in Salt Lake City Utah – US GOLD only accepts payment for gold products through bank wire transfer in USD, and in cash (USD) at one of our convenient locations throughout the United States.
+                    US GOLD only accepts payment for gold products in U.S. dollars, either through bank wire transfer or in cash. We have convenient locations in the following cities:
                   </OpenH3>
                   <VerticalSpacer height={150}/>
                   <OpenH4 color='white'>
-                   Salt Lake City{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Portland{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Seattle{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Denver{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Phoenix{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Las Vegas
+                  Chicago{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Dallas{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Las Vegas{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Salt Lake City
                   </OpenH4>
-                  <OpenH4 color='white'>
-                  San Francisco{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}Los Angeles{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}San Diego
-                  </OpenH4>
+
+                  
+
                 </Grid.Column>
                 <Grid.Column width={1}/>
               </Grid.Row>
