@@ -107,12 +107,7 @@ class MobileContainer extends Component {
           <Sidebar as={Menu} vertical visible={sidebarOpened}>
             <Menu.Item as={NavLink} exact name='Home' to='/' activeClassName="active"/>
             <Menu.Item as={NavLink} name='About' to='/about' activeClassName="active"/>
-            <Menu.Item as={NavLink} name='Token' to='/token' activeClassName="active"/>
-            <Menu.Item as={NavLink} name='Purchase' to='/purchase' activeClassName="active"/>
-            <Menu.Item as={NavLink} name='Wallet' to='/wallet' activeClassName="active"/>
-            <Menu.Item as={NavLink} name='Redeem' to='/redeem' activeClassName="active"/>
             <Menu.Item as={NavLink} name='Contact' to='/contact' activeClassName="active"/>
-            <Menu.Item as={NavLink} name='Resources' to='/resources' activeClassName="active"/>
           </Sidebar>
 
           <Sidebar.Pusher
