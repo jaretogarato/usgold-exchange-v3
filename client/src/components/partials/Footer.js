@@ -139,7 +139,7 @@ class Footer extends React.Component {
                                     <img src={UsGoldCurrency} style={{width: "100%", margin: "0 auto", maxWidth: "250px"}}/>
                                 </Grid.Column>
 
-                                <Grid.Column width={2}>
+                                <Grid.Column width={4}>
 
                                     <a href="/" alt="home">
                                         <OpenP color='white' deco='underline' textAlign='left' paddingBottom='0.5em'>
@@ -165,37 +165,33 @@ class Footer extends React.Component {
 
 
                                 <Grid.Column width={7}>
-
-                                    <OpenP color='white' textAlign='center'>
-                                        <Icon name='phone'/><b>1 (800) 673-5800</b> | <Icon name='mail outline'/><a
+                                    <OpenP color='white' textAlign='left'>
+                                        <Icon name='phone'/><b>1-800-607-4600</b><br />
+                                        <Icon name='mail outline'/><a
                                         href='mailto:sales@usgoldinc.com'><OpenSpanWhite>sales@usgoldinc.com</OpenSpanWhite></a>
                                     </OpenP>
-                                    <Grid>
+                                    {/* <Grid>
                                         <Grid.Row columns='equal'>
                                             <Grid.Column width={8} textAlign='center'>
                                                 <BBB/><br/>
                                             </Grid.Column>
                                         </Grid.Row>
-                                    </Grid>
+                                    </Grid> */}
                                 </Grid.Column>
 
                                 {/* <Grid.Column width={6}>
                   <MailChimpForm />
                 </Grid.Column> */}
-                
-                
-                
-                
-                
+
                             </Grid.Row>
-
                             <Grid.Row columns='equal'>
-
-
                                 <Grid.Column textAlign='center'>
                                     <OpenPSmall textAlign='center' color='white'>
                                         &nbsp;<br/>
-                                       The materials provided on the US Gold website are for informational purposes only. Neither US Gold nor its affiliates make any express or implied warranties (including without limitation, any warranty of merchantability or fitness for a particular purpose or use) regarding the information appearing on the website nor will they be liable for loss, damages or loss of profit resulting from the use of information appearing on the website. Neither US Gold nor its affiliates will be liable to any user or anyone else for any interruption, inaccuracy, error or omission, delay in or failure of transmission of information through the website regardless of cause, or for any resulting damages. Copyright © 1980-2018 US Gold
+                                       The materials provided on the US Gold website are for informational purposes only. Neither US Gold nor its affiliates make any express or implied warranties (including without limitation, any warranty of merchantability or fitness for a particular purpose or use) regarding the information appearing on the website nor will they be liable for loss, damages or loss of profit resulting from the use of information appearing on the website. Neither US Gold nor its affiliates will be liable to any user or anyone else for any interruption, inaccuracy, error or omission, delay in or failure of transmission of information through the website regardless of cause, or for any resulting damages.
+                                    </OpenPSmall>
+                                    <OpenPSmall textAlign='center' color='white'>
+                                      Copyright © 2019 US Gold
                                     </OpenPSmall>
                                     <OpenPSmall textAlign='center' color='white'>
                                         &nbsp;<br/>

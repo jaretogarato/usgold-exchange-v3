@@ -31,7 +31,7 @@ class Contact extends Component {
                   Contact US GOLD
                 </HhH1>
                 <HhH2>
-                  1 (800) 673-5800
+                  1-800-607-4600
                 </HhH2>
                 <HhH2>
                   sales@usgoldinc.com
@@ -49,8 +49,8 @@ class Contact extends Component {
             <Grid.Column width={2}></Grid.Column>
             <Grid.Column width={12}>
               <OpenH3>
-                Please send us any questions or comments about our website or products. 
-              
+                Please send us any questions or comments about our website or products.
+
               </OpenH3>
               <OpenH3>
               A US Gold representative is ready to assist you today.

@@ -67,21 +67,16 @@ class About extends Component {
             <Grid>
               <Grid.Row>
                 <Grid.Column>
-                <OpenH3 textAlign='left'>Why US GOLD is the perfect partner for your conversion from Fiat Currency to Gold Currency</OpenH3>
+                <OpenH3 textAlign='center'>US GOLD is your perfect choice for Monetary Gold Currency</OpenH3>
                 <HrOrange/>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row>
-
                 <Grid.Column>
-
                   <OpenH4 textAlign='left'>
-                    With over 38 years of expertise in transacting gold purchases for clients where privacy and discretion is at the forefront, US GOLD has established it role and responsibility as the premier provider of gold products, specialized delivery and private vault storage services for the most demanding cliental.
+                    With over 39 years of expertise in transacting gold purchases for clients where privacy and discretion is at the forefront, US GOLD has established it role and responsibility as the premier provider of gold products, specialized delivery and private vault storage services for the most demanding cliental.
                   </OpenH4>
-                 
-
                 </Grid.Column>
-
               </Grid.Row>
             </Grid>
           </Container>
@@ -94,7 +89,7 @@ class About extends Component {
                 <Grid.Column width={1}/>
                 <Grid.Column width={14}>
                   <OpenH3 color='white'>
-                    Based in Salt Lake City Utah – US GOLD only accepts payment for gold products through bank wire transfer in USD, and in cash (USD) at one of our convent locations throughout the United States.
+                    Based in Salt Lake City Utah – US GOLD only accepts payment for gold products through bank wire transfer in USD, and in cash (USD) at one of our convenient locations throughout the United States.
                   </OpenH3>
                   <VerticalSpacer height={150}/>
                   <OpenH4 color='white'>
@@ -110,8 +105,8 @@ class About extends Component {
           </Container>
         </FullWidthBgDiv>
 
-      
-        
+
+
 
         <Footer/>
       </Container>

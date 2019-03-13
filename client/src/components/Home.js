@@ -153,8 +153,8 @@ class Home extends Component {
                 <h1>US GOLD</h1>
                 <h2>Your Private Gold Bullion Dealer.</h2>
                 <div className={'hero-secondary'}>
-                  <h2 style={{color:'white', lineHeight:'38px'}}>We make buying, storing, and selling gold safe and convenient</h2>
-                 
+                  <h2 style={{color:'white', lineHeight:'38px'}}>We make buying, storing, and selling gold safe and convenient.</h2>
+
                 </div>
               </HhTextContainer>
               <Fade>
@@ -197,15 +197,15 @@ Produced only from gold mined in the United States – authorized by the Bullion
 The American Eagle’s value is based on the market price of its metal content, plus a reasonable premium charge to cover coinage and distribution.
                     </p>
                   </Grid.Column>
-                 
+
                 </Grid.Row>
                 <Grid.Row style={{height: '10%'}}>
                   <Grid.Column style={{textAlign: 'center'}}>
 
                     <OpenH2>
-                      Each of our representatives is dedicated to providing you with exceptional value while delivering best-in-class service. 
+                      Each of our representatives is dedicated to providing you with exceptional value while delivering best-in-class service.
                     </OpenH2>
-                    <OpenH2>Please call us at 800-673-5800 for a no obligation gold quote today.</OpenH2>
+                    <OpenH2>Please call us at 800-607-4600 for a no obligation gold quote today.</OpenH2>
 
                   </Grid.Column>
                 </Grid.Row>
@@ -235,9 +235,9 @@ The American Eagle’s value is based on the market price of its metal content, 
         {/*</HeroHeader>*/}
 
 
-       
-       
-     
+
+
+
 
         <Footer/>
       </Container>
