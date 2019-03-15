@@ -166,17 +166,18 @@ class Footer extends React.Component {
 
                                 <Grid.Column width={7}>
                                     <OpenP color='white' textAlign='left'>
-                                        <Icon name='phone'/><b>1-800-607-4600</b><br />
-                                        <Icon name='mail outline'/><a
+                                        &nbsp;<Icon name='phone'/><b>1-800-607-4600</b><br />
+                                        &nbsp;<Icon name='mail outline'/><a
                                         href='mailto:sales@usgoldinc.com'><OpenSpanWhite>sales@usgoldinc.com</OpenSpanWhite></a>
                                     </OpenP>
-                                    {/* <Grid>
+                                    <Grid>
                                         <Grid.Row columns='equal'>
                                             <Grid.Column width={8} textAlign='center'>
                                                 <BBB/><br/>
                                             </Grid.Column>
+                                            <Grid.Column></Grid.Column>
                                         </Grid.Row>
-                                    </Grid> */}
+                                    </Grid>
                                 </Grid.Column>
 
                                 {/* <Grid.Column width={6}>
