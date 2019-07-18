@@ -1,35 +1,24 @@
-# USG INC
+# README
 
-Client:
-`npm run start`
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Server:
-`node simpleserver.js`
+Things you may want to cover:
 
+* Ruby version
 
-Deploy:
-download USGNode-Master.zip
+* System dependencies
 
-ftp place/replace in ubuntu folder
+* Configuration
 
-ssh (ubuntu): unzip USGNode-Master.zip
+* Database creation
 
-A (for overwrite 'All')
+* Database initialization
 
-`screen -r`
-ctrl-c
+* How to run the test suite
 
-IF Server screen:
+* Services (job queues, cache servers, search engines, etc.)
 
-node simpleserver
+* Deployment instructions
 
-IF client screen:
-
-sudo npm run start
-
-ctrl-a ctrl-n
-
-should be other (server if client and client if server)
-
-
-once everything gets going, the site should be running.
+* ...
