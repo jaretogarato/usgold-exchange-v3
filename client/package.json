@@ -1,6 +1,9 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
@@ -45,6 +48,7 @@
     "semantic-ui-react": "^0.79.0",
     "styled-components": "^3.3.0",
     "url-loader": "^1.0.1",
+    "web3": "^1.0.0-beta.55",
     "webfontloader": "^1.6.28",
     "websocket-driver": "^0.7.3",
     "webticker": "^3.0.0"

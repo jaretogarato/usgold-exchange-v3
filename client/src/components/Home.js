@@ -136,8 +136,8 @@ class Home extends Component {
                 <div>
                   We use cookies on this site to enhance your user experience.<br/>
                   <span style={{fontSize: "10px"}}>
-              By clicking any link on this site you give your consent for us to use cookies.
-              </span>
+                    By clicking any link on this site you give your consent for us to use cookies.
+                  </span>
                   {" "}
                 </div>
 
@@ -153,8 +153,8 @@ class Home extends Component {
                 <h1>US GOLD</h1>
                 <h2>Your Private Gold Bullion Dealer.</h2>
 
-                  <h2>We make buying, storing, and selling</h2>
-                  <h2>gold safe and convenient.</h2>
+                <h2>We make buying, storing, and selling</h2>
+                <h2>gold safe and convenient.</h2>
 
               </HhTextContainer>
               <Fade>
@@ -166,7 +166,7 @@ class Home extends Component {
         <div className={"hero-spacer"}>
         </div>
         <div className={"hero-wrapper"}>
-          <FullWidthDiv color className={"hero-sub-row grey-bg"}>
+          <FullWidthDiv className={"hero-sub-row grey-bg"}>
             <Container>
               <Grid stackable padded>
                 <Grid.Row className={'top20'}>
