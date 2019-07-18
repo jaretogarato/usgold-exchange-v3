@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.StickyContainer = exports.Sticky = undefined;
 
-var _Sticky = require('./Sticky');
+var _Sticky = require("./Sticky");
 
 var _Sticky2 = _interopRequireDefault(_Sticky);
 
-var _Container = require('./Container');
+var _Container = require("./Container");
 
 var _Container2 = _interopRequireDefault(_Container);
 
