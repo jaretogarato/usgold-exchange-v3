@@ -34,7 +34,7 @@ class Contact extends Component {
                   1-800-607-4600
                 </HhH2>
                 <HhH2>
-                  sales@usgoldinc.com
+                  support@usgold.exchange
                 </HhH2>
               </HhTextContainer>
               <Fade>
