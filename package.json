@@ -2,19 +2,13 @@
   "name": "create-repack-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd client && npm install --only=dev && npm install && npm install cookie-session && npm run build && cd ../server && npm install cors && npm install web3@1.0.0-beta.35 && npm install cookie-session ",
-    "start": "cd server && node simpleserver.js",
+    "build": "cd client && npm install --only=dev && npm install && npm run build && cd ..",
     "deploy": "cp -a client/build/. public/",
     "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'",
-    "sass": "sass --watch src/scss:src/css"
+    "sass" : "sass --watch src/scss:src/css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cookie-session": "^2.0.0-beta.3",
-    "cors": "^2.8.4",
-    "lowdb": "^1.0.0",
-    "web3": "^1.0.0-beta.36"
-  }
+  "dependencies": {}
 }
