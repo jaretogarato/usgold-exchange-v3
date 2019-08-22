@@ -28,13 +28,10 @@ class Contact extends Component {
             <HhInnerContainer>
               <HhTextContainer>
                 <HhH1>
-                  Contact US GOLD
+                  Contact Us
                 </HhH1>
                 <HhH2>
-                  1-800-607-4600
-                </HhH2>
-                <HhH2>
-                  support@usgold.exchange
+                  We'd love to hear from you.
                 </HhH2>
               </HhTextContainer>
               <Fade>
@@ -43,27 +40,26 @@ class Contact extends Component {
             </HhInnerContainer>
           </Container>
         </HeroHeader>
-        <FullWidthDiv topColor='#eaebee' bottomColor='#eaebee'>
-        <Grid padded>
-          <Grid.Row>
-            <Grid.Column width={2}></Grid.Column>
-            <Grid.Column width={12}>
-              <OpenH3>
-                Please send us any questions or comments about our website or products.
-
-              </OpenH3>
-              <OpenH3>
-              A US Gold representative is ready to assist you today.
-              </OpenH3>
-            </Grid.Column>
-            <Grid.Column width={2}></Grid.Column>
-          </Grid.Row>
-        </Grid>
 
         <SubmitForm />
-        </FullWidthDiv>
 
+        {/* <Container>
 
+          <Header as='h1' />
+          <Header as='h1' textAlign='center'>
+            We'd love to hear from you.
+          </Header>
+          <Container fluid>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column width={16}>
+                  <SubmitForm />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
+
+        </Container> */}
         <Footer />
       </Container>
     );

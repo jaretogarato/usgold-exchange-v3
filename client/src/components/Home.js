@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Container, Grid, Segment, Image, Button, Responsive} from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { Container, Grid, Segment, Image } from 'semantic-ui-react';
 import axios from 'axios';
 
 // ---------- images ------------
@@ -8,37 +8,26 @@ import BricksGold from '../assets/images/bricks-gold.png';
 import GoldBars from '../assets/images/gold-bars.jpg';
 import InfinityBlue from '../assets/images/infinity-blue.png';
 import USGoldToken from '../assets/images/usg-token.png';
-import USGoldTokenNoShadow from '../assets/images/usg-token-noWhite.png';
 import PoweredByOpenNetwork from '../assets/images/powered-by-open-network.png';
 import IconGoldBacked from '../assets/images/icon-panel-gold-backed.png';
 import IconStableValue from '../assets/images/icon-panel-stable-value.png';
-import IconCoin from '../assets/images/icon-panel-coin.png';
-import MainGoldBG from '../assets/images/us-gold-bg.jpg';
-import TokenSide from '../assets/images/coin-side.png';
+import IconPerfectExit from '../assets/images/icon-panel-perfect-exit.png';
+import MainPanelsBg from '../assets/images/main-panels-bg.jpg';
+import CubesColored from '../assets/images/cubes-colored.png';
 import LinesColored from '../assets/images/lines-three-colored.png';
-import LinesGrey from '../assets/images/lines-three-grey.png';
-import LinesGold from '../assets/images/lines-three-gold.png';
-import TokenEagle from '../assets/images/token-eagle.png';
-import StableByDesign from '../assets/images/gold-blockchain-stable-by-design.png'
 import CubeGold from '../assets/images/cube-gold.png';
 import ChartBitcoin from '../assets/images/chart-bitcoin.jpg';
 import ChartEthereum from '../assets/images/chart-ethereum.jpg';
 import ChartUSGold from '../assets/images/chart-usgold.jpg';
 import GoldOnGradient from '../assets/images/gold-bar-on-gradient.png';
 import CubeColoredB from '../assets/images/cube-colored-b.png';
+import BuyKeepRedeem from '../assets/images/buy-keep-redeem-bg-wide.jpg';
 import PaymentsAccepted from '../assets/images/payments-accepted.png';
 import FincenLogoBlack from '../assets/images/fincen-logo-black.png';
 import BBBGray from '../assets/images/bbb-gray-400x.png';
 import FincenGray from '../assets/images/fincen-gray-400x.png';
 import WyomingGray from '../assets/images/wyoming-seal-gray-400x.png';
 import GoldBarsHoriz from '../assets/images/gold-bars-horiz.jpg';
-import CubesTwo from '../assets/images/us-gold-currency-logo-symbol.png';
-import CookieConsent from "react-cookie-consent";
-import EthereumLogo from '../assets/images/ethereum-logo.jpg';
-// import USGLogoSymbol from '../assets/images/us-gold-currency-logo-symbol.png';
-import USGSingleCube from '../assets/images/usg-single-cube.png';
-import USGLogoSymbol from '../assets/images/us-gold-currency-logo-symbol.png';
-import GoldEagle from '../assets/images/goldEaglePage.png';
 
 // USGInUSD in is master value for entire application
 import {USGInUSD} from './partials/USGInUSD';
@@ -53,16 +42,16 @@ import '../css/react-reveal.css';
 import '../css/mailchimp.css';
 import {
   HeroHeader, HhInnerContainer, HhTextContainer,
-  HhImageContainer, HhH1, HhH2, HhH3,
+  HhImageContainer, HhH1, HhH2,
   Img2,
   FullWidthDiv, FullWidthBgDiv,
   FlexRowContainer,
-  OpenH2, OpenH3, OpenH4, OpenH5, OpenP, OpenPSmall, OpenSpanGreen, OpenSpanRed,
+  OpenH3, OpenH4, OpenH5, OpenP, OpenPSmall, OpenSpanGreen, OpenSpanRed,
   OpenUl, OpenLi,
   BorderedDiv, BorderedDivHead, BorderedDivBody, BorderedDivInnerWrapper,
-  HoverCenterDiv, HoverCenterDivWrap, HoverCenterDivCoin,
+  HoverCenterDiv, HoverCenterDivWrap,
   DividerGrayGrad, VerticalSpacer,
-  HrGrey, HrWhite,
+  HrOrange, HrWhite,
   USGButton,
 } from '../css/styledComponents';
 
@@ -83,13 +72,13 @@ import Fade from 'react-reveal/Fade';
 
 class Home extends Component {
 
-  state = {USGInUSD: 0.0, ethereumPrice: 0.0, ethereum24hrChange: 0.0, USGInEthereum: 0.0};
+  state = { USGInUSD: 0.0, ethereumPrice: 0.0, ethereum24hrChange: 0.0, USGInEthereum: 0.0 };
 
   componentDidMount() {
     this.getEthereumPrice();
     console.log('usginusd:');
     console.log(USGInUSD);
-    this.setState({USGInUSD: USGInUSD});
+    this.setState({ USGInUSD: USGInUSD });
   }
 
   getEthereumPrice = () => {
@@ -113,133 +102,503 @@ class Home extends Component {
 
   render() {
     return (
-
       <Container fluid>
-        <Container>
-          <div style={{position: "fixed", zIndex: "10"}}>
-            <Container className={"cookie-consent-container"}>
-              <CookieConsent
-                location="top"
-                buttonText="Yes, I agree"
-                cookieName="myAwesomeCookieName3"
-                style={{background: "rgba(0,0,0,.8)", position: "relative !important", float: "right", width: "400px"}}
-                buttonStyle={{
-                  backgroundColor: "transparent",
-                  boxShadow: " 0 0 0 2px #d4d4d5 inset !important",
-                  color: "#fff",
-                  border: "#fff 2px solid",
-                  borderRadius: "4px",
-                  marginTop: "0px"
-                }}
-                expires={150}
-              >
-                <div>
-                  We use cookies on this site to enhance your user experience.<br/>
-                  <span style={{fontSize: "10px"}}>
-                    By clicking any link on this site you give your consent for us to use cookies.
-                  </span>
-                  {" "}
-                </div>
-
-              </CookieConsent>
-            </Container>
-
-          </div>
-        </Container>
         <HeroHeader bgImage={TopBg}>
           <Container>
             <HhInnerContainer>
-              <HhTextContainer className={"home-hero-text"}>
-                <h1>US GOLD</h1>
-                <h2>Your Private Gold Bullion Dealer.</h2>
-
-                <h2>We make buying, storing, and selling</h2>
-                <h2>gold safe and convenient.</h2>
-
+              <HhTextContainer>
+                <HhH1>
+                  US Gold
+                </HhH1>
+                <HhH2>
+                  The convenience of the blockchain. The stability of gold.
+                </HhH2>
               </HhTextContainer>
               <Fade>
-                <HhImageContainer bgImage={USGoldToken}/>
+                <HhImageContainer bgImage={USGoldToken} />
               </Fade>
             </HhInnerContainer>
           </Container>
         </HeroHeader>
-        <div className={"hero-spacer"}>
-        </div>
-        <div className={"hero-wrapper"}>
-          <FullWidthDiv className={"hero-sub-row grey-bg"}>
-            <Container>
-              <Grid stackable padded>
-                <Grid.Row className={'top20'}>
-                  <Grid.Column width={16} style={{textAlign: 'center'}}>
-                    <Container>
-                      <OpenH2>Providing discreet gold bullion coin sales and private vault storage.</OpenH2>
-                    </Container>
-                  </Grid.Column>
-                </Grid.Row>
 
-                <Grid.Row className={'top70'}>
-                  <Grid.Column width={16} style={{border: "0px"}}>
-                    <Img src={GoldEagle} style={{margin: "0 auto 30px", height:'200px', width:'200px'}}/>
-                    <h4 style={{textAlign: 'center'}} className={"aller uppercase grey-text"}>
-                      American Eagle Gold One Ounce Coin
-                    </h4>
-                    <p style={{textAlign: 'center', fontSize:'20px'}}>
-                     American Eagle – Authorizing Legislation: Public Law 99-185
-</p>
-                    <p style={{textAlign: 'center', fontSize:'20px'}}>
+        <FullWidthDiv topColor='#f9f9f9' bottomColor='#f9f9f9'>
+          <Container>
+            <OpenH3>
+              USG tokens are direct digital representations of American Eagle one ounce gold coins, minted by the United States of America — in cryptographic form — and can be redeemed at any time for the physical version of the coin.
+            </OpenH3>
+            <Grid stackable>
+              <Grid.Row columns='equal'>
+                <Grid.Column>
+                  <FlexRowContainer>
+                    <div>
+                      <Img src={BricksGold} width={127} height={80} mode='fit' alt="Gold bricks" />
+                    </div>
+                    <OpenP>
+                      {/* Each USG token is backed by an American Eagle one ounce gold coin, and may be redeemed any time for the physical coin. */}
+                      Each USG token is backed by an American Eagle one ounce gold coin, minted by the United States Mint, and may be redeemed any time for the physical coin.
+                    </OpenP>
+                  </FlexRowContainer>
+                </Grid.Column>
+                <Grid.Column>
+                  <FlexRowContainer>
+                    <div>
+                      <Img src={InfinityBlue} width={127} height={80} mode='fit' alt="Infinity symbol" />
+                    </div>
+                    <OpenP>
+                      {/* Our blockchain currency is a utility token with a stable value by design. It’s a true virtual currency, and an ideal safe haven from cryptocurrency market volatility. */}
 
+                      Our blockchain currency is a utility token with a stable value by design. It’s a true virtual currency, ideal for global payment systems and a safe haven coin from crypto market volatility.
+                    </OpenP>
+                  </FlexRowContainer>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column rows={2}>
+                  <FlexRowContainer>
+                    <OpenP>
+                      It’s the perfect currency whether you plan to hold it, spend it, or exchange it.
+                    </OpenP>
+                  </FlexRowContainer>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
+        </FullWidthDiv>
 
-Produced only from gold mined in the United States – authorized by the Bullion Coin Act of 1985, American Eagle Gold Bullion Coins are one of the world’s leading gold bullion investment coins.
-</p>
-                    <p style={{textAlign: 'center', fontSize:'20px'}}>
+        {/* <FullWidthDiv topColor='#fff' bottomColor='#fff' id={2}>
+          <Container>
+            <Grid stackable>
+          <Grid.Row style={styles.noPadOrMargin}>
+          <Grid.Column width={3} />
+          <Grid.Column width={6} style={styles.noPadOrMargin}>
+          <OpenH5>
+          Buy USG Tokens:
+          </OpenH5>
+          </Grid.Column>
+          <Grid.Column width={4} />
+          <Grid.Column width={3} textAlign='right' style={styles.noPadOrMargin} only='tablet computer'>
+          <a href="http://www.opennetwork.io" target="_blank" rel="noopener noreferrer"><Img src={PoweredByOpenNetwork} width={120} height={29} mode='fit' /></a>
+          </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+          <Grid.Column width={1} />
+          <Grid.Column width={2} verticalAlign='middle' only='tablet computer'>
+          <Img src={USGoldToken} width={100} height={80} mode='fit' />
+          </Grid.Column>
+          <Grid.Column width={3} verticalAlign='middle'>
+          <FlexRowContainer>
+          <div style={styles.fullWidth} >
+          <OpenPSmall>
+          CURRENT PRICE (IN <strong>ETH</strong>)
+          </OpenPSmall>
+          <OpenPSmall>
+          {this.state.USGInEthereum} &nbsp;
+          {
+          (this.state.ethereum24hrChange > 0)
+          ? <OpenSpanGreen>
+          {this.state.ethereum24hrChange}%
+          </OpenSpanGreen>
+          : <OpenSpanRed>
+          {this.state.ethereum24hrChange}%
+          </OpenSpanRed>
+          }
+          </OpenPSmall>
+          </div>
+          </FlexRowContainer>
+          </Grid.Column>
+          <Grid.Column width={3} verticalAlign='middle'>
+          <OpenPSmall>
+          CURRENT PRICE (IN <strong>USD</strong>) <br />
+          </OpenPSmall>
+          <OpenPSmall>
+          ${this.state.USGInUSD.toFixed(2)}
+          <OpenSpanGreen>
+          &nbsp; STABLE
+          </OpenSpanGreen>
+          </OpenPSmall>
+          </Grid.Column>
+          <Grid.Column width={2} />
+          <Grid.Column width={2} verticalAlign='middle'>
+          <a href='/login'><USGButton>Buy</USGButton></a>
+          </Grid.Column>
+          <Grid.Column width={2} verticalAlign='middle'>
+          <a href='/login'><USGButton>Redeem</USGButton></a>
+          </Grid.Column>
+          <Grid.Column width={1} />
+          </Grid.Row>
+            </Grid>
+          </Container>
+        </FullWidthDiv> */}
 
+        <FullWidthBgDiv bgImage={MainPanelsBg} minHeight='850px' id={3}>
+          <Container>
+            <HoverCenterDivWrap top='0'>
+              <Fade bottom delay={10}>
+                <HoverCenterDiv
+                  bgImage={CubesColored}
+                  height='300px'
+                  top='-165px'
+                />
+              </Fade>
+            </HoverCenterDivWrap>
+            <HoverCenterDivWrap top='200px'>
+              <Fade bottom delay={300}>
+                <HoverCenterDiv
+                  bgImage={LinesColored}
+                  height='300px'
+                  top='-165px'
+                />
+              </Fade>
+            </HoverCenterDivWrap>
 
-The American Eagle’s value is based on the market price of its metal content, plus a reasonable premium charge to cover coinage and distribution.
-                    </p>
-                  </Grid.Column>
+            <Grid padded stackable style={styles.pushedDown}>
+              <Grid.Row columns='equal' stretched style={styles.orangeBorder} >
+                <Grid.Column textAlign='center' style={styles.orangeBorder}>
+                  {/* <Fade bottom className='fade-flex'> */}
+                  <Fade bottom style={{...styles.fadeFlex}}>
+                    <BorderedDiv>
+                      <BorderedDivInnerWrapper>
+                        <BorderedDivBody>
+                          <Img src={IconGoldBacked} width={120} height={77} mode='fill' />
+                        </BorderedDivBody>
+                        <BorderedDivHead>
+                          100% Gold Coin-Backed
+                        </BorderedDivHead>
+                        <BorderedDivBody>
+                          <OpenP>
+                            Each USG Token is backed by an American Eagle one ounce gold coin from the U.S. Mint, creating a unique, stable blockchain currency.
+                          </OpenP>
+                          <OpenUl>
+                            <OpenLi>
+                              Accurate blockchain ledger delivers security and transparency.
+                            </OpenLi>
+                            <OpenLi>
+                              Blockchain currency provides instant access and convenience.
+                            </OpenLi>
+                            <OpenLi>
+                              Real gold backing maintains unmatched stability.
+                            </OpenLi>
+                          </OpenUl>
+                        </BorderedDivBody>
+                      </BorderedDivInnerWrapper>
+                    </BorderedDiv>
+                  </Fade>
+                </Grid.Column>
+                <Grid.Column textAlign='center' style={styles.orangeBorder}>
+                  <Fade bottom delay={200}>
+                    <BorderedDiv>
+                      <BorderedDivInnerWrapper>
+                        <BorderedDivBody>
+                          <Img src={IconStableValue} width={120} height={77} mode='fill' />
+                        </BorderedDivBody>
+                        <BorderedDivHead>
+                          100% Stable Value Token
+                        </BorderedDivHead>
+                        <BorderedDivBody>
+                          <div>
+                            <OpenP>
+                              Each USG Token is tied to an American Eagle one ounce gold coin, creating a unique, stable currency measured in gold — not dollars.
+                            </OpenP>
+                            <OpenUl>
+                              <OpenLi>
+                                Our tokens are equally matched to the United States Mint published price.
+                              </OpenLi>
+                              <OpenLi>
+                                Our tokens are a perfect overnight safe-haven for cryptocurrency day traders.
+                              </OpenLi>
+                              <OpenLi>
+                                Our tokens are the safe alternative to volatile market conditions.
+                              </OpenLi>
+                            </OpenUl>
+                          </div>
+                          {/* US Gold cryptocurrency tokens are tied to a fixed gold price:<br /><br />
+                            • Hedge against volatile markets<br />
+                            • The U.S. Mint sets the price<br />
+                          • The alternative to Bitcoin<br /> */}
+                        </BorderedDivBody>
+                      </BorderedDivInnerWrapper>
+                    </BorderedDiv>
+                  </Fade>
+                </Grid.Column>
+                <Grid.Column textAlign='center' style={styles.orangeBorder}>
+                  <Fade bottom delay={400}>
+                    <BorderedDiv>
+                      <BorderedDivInnerWrapper>
+                        <BorderedDivBody>
+                          <Img src={IconPerfectExit} width={120} height={77} mode='fill' />
+                        </BorderedDivBody>
+                        <BorderedDivHead>
+                          100% Perfect Currency
+                        </BorderedDivHead>
+                        <BorderedDivBody>
+                          <div>
+                            <OpenP>
+                              {/* USG Tokens may be redeemed any time for the physical American Eagle gold coins that they directly represent. */}
+                              You may redeem your USG Tokens at any time for the physical American Eagle one ounce gold coins that they directly represent.
+                            </OpenP>
+                            <OpenUl>
+                              <OpenLi>
+                                American Eagle gold coins are real currency.
+                              </OpenLi>
+                              <OpenLi>
+                                US Gold Currency tokens are also real currency.
+                              </OpenLi>
+                              <OpenLi>
+                                Stable value tokens backed by gold: the ideal blockchain currency for everyday use.
+                              </OpenLi>
+                            </OpenUl>
+                          </div>
+                          {/* USG tokens are always redeemable for physical 1 oz American Gold Eagle coins:<br /><br />
+                          Plan your hedge play or exit from cryptocurrencies that aren't asset-backed. */}
+                        </BorderedDivBody>
+                      </BorderedDivInnerWrapper>
+                    </BorderedDiv>
+                  </Fade>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+            {/* <VerticalSpacer height='50px' /> */}
+          </Container>
+        </FullWidthBgDiv>
 
-                </Grid.Row>
-                <Grid.Row style={{height: '10%'}}>
-                  <Grid.Column style={{textAlign: 'center'}}>
+        <FullWidthDiv topColor='#fff' bottomColor='#e9e9e9' id={4}>
+          <Container>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column width={5}>
+                  <h1>&nbsp;</h1>
+                  <Fade bottom>
+                    <Img2 src={CubeGold} width='100%' />
+                  </Fade>
+                </Grid.Column>
+                <Grid.Column width={11}>
+                  <OpenH3 textAlign='left'>
+                    Security is Paramount
+                  </OpenH3>
+                  <Grid stackable>
+                    <Grid.Row columns='equal'>
+                      <Grid.Column>
+                        <OpenH4 textAlign='left'>Physical Gold</OpenH4>
+                        <HrOrange />
+                        <OpenP textAlign='left'>
+                          Every American Eagle one ounce gold coin backing a USG token is stored in a fully insured, secure vault, and audited annually by an independent third party auditing firm.
+                        </OpenP>
+                      </Grid.Column>
+                      <Grid.Column>
+                        <OpenH4 textAlign='left'>Blockchain</OpenH4>
+                        <HrOrange />
+                        <OpenP textAlign='left'>
+                          USG tokens are issued and administered via smart contracts on Ethereum, a blockchain-based distributed computing platform. Providing immutable transparent transactions for safety and accuracy.
+                          {/* USG tokens are based on industry-standard, military-grade blockchain encryption — a technology that has a proven track record and is trusted by countless banks and institutions around the world. */}
+                        </OpenP>
+                      </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                      <Grid.Column>
+                        <OpenP>
+                          When your ether starts to feel too ... well, ethereal, come and experience the feeling of knowing your currency is backed by solid gold.
+                        </OpenP>
+                      </Grid.Column>
+                    </Grid.Row>
+                  </Grid>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
+        </FullWidthDiv>
 
-                    <OpenH2>
-                      Each of our representatives is dedicated to providing you with exceptional value while delivering best-in-class service.
-                    </OpenH2>
-                    <OpenH2>Please call us at 800-607-4600 for a no obligation gold quote today.</OpenH2>
+        <FullWidthDiv topColor='#fff' bottomColor='#fff' id={5}>
+          <Container>
+            <Grid padded>
+              <Grid.Row>
+                <Grid.Column>
+                  <OpenH3>
+                    {/* The Unmistakable Allure of Stability */}
+                    The Power Of Stability
+                  </OpenH3>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row columns='equal'>
+                <Grid.Column>
+                  <OpenH4>
+                    Bitcoin (BTC)
+                  </OpenH4>
+                  <HrOrange />
+                  <p />
+                  <Image src={ChartBitcoin} size='large' />
+                </Grid.Column>
+                <Grid.Column>
+                  <OpenH4>
+                    US Gold (USG)
+                  </OpenH4>
+                  <HrOrange />
+                  <p />
+                  <Image src={ChartUSGold} size='large' />
+                </Grid.Column>
+                <Grid.Column>
+                  <OpenH4>
+                    Ethereum (ETH)
+                  </OpenH4>
+                  <HrOrange />
+                  <p />
+                  <Image src={ChartEthereum} size='large' />
+                </Grid.Column>
+              </Grid.Row>
 
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
-            </Container>
+              <Grid.Row>
+                <Grid.Column width={16}>
+                  <FullWidthDiv topColor='#63cdf6' bottomColor='#3c86a3' padTopAndBottom='20px' padLeftAndRight='15%'>
+                    <OpenH5 color='#fff'>
+                      These charts are provided to compare the volatility over time of leading cryptocurrencies to that of USG. If a picture is worth a thousand words, these charts tell all you need to know about the benefit of the stable value of our blockchain currency.
+                    </OpenH5>
+                  </FullWidthDiv>
+                </Grid.Column>
+              </Grid.Row>
+
+              <Grid.Row>
+                <Grid.Column width={2} />
+                <Grid.Column width={12} >
+                  <OpenH4>
+                    If you value the privacy, flexibility, and security of cryptocurrencies, but find yourself wanting real stability, USG tokens are the ones you want in your wallet.
+                  </OpenH4>
+                </Grid.Column>
+                <Grid.Column width={2} />
+              </Grid.Row>
+            </Grid>
+          </Container>
+        </FullWidthDiv>
+
+        {/* <FullWidthDiv topColor='#fff' bottomColor='#efefef' id={6}>
+          <DividerGrayGrad>
+            <Segment basic>
+          <Fade right delay={10}>
+          <Img src={CubeColoredB} width={160} height={130} marginTop={50} />
+          </Fade>
+            </Segment>
+          </DividerGrayGrad>
+          <Container>
+            <Grid stackable>
+          <Grid.Row>
+          <Grid.Column width={8}>
+          <OpenH3 style={styles.padTopB} >
+          Solid Gold...
+          </OpenH3>
+          <HrOrange />
+          <Fade>
+          <Image src={GoldBarsHoriz} fluid />
+          </Fade>
+          <OpenH4>
+          We live in a rapidly changing world. But for a very long time, one thing has never changed: the use of Gold as a reliable store of value.<br /><br />
+          </OpenH4>
+          <OpenP>
+          US Gold Currency adds something to this already-solid mechanism: The market price for a USG token upon this website is always equal to the established market price for an American Eagle one ounce gold coin from the United States Mint.
+          </OpenP>
+          <OpenP>
+          From time to time, the value of a USG token may change, and in the open market exchanges, the value of USG tokens is set by the market condition.
+          </OpenP>
+          <OpenP>
+          United States Mint current price: ${this.state.USGInUSD.toFixed(2)} USD<br />
+          US Gold Currency current price: ${this.state.USGInUSD.toFixed(2)} USD
+          </OpenP>
+          </Grid.Column>
+
+          <Grid.Column width={8}>
+          <OpenH3 style={styles.padTopB}>
+          Solid Company.
+          </OpenH3>
+          <HrOrange />
+
+          <Grid stackable>
+          <Grid.Row columns='equal'>
+          <Grid.Column>
+          <FullWidthDiv topColor='#ccc' bottomColor='#eee' padTopAndBottom='20px' padLeftAndRight='10%' height='350px'>
+          <OpenP>
+          <Image src={FincenGray} centered size='tiny' />
+          <br /><br />
+          <strong>Registered:</strong><br />
+          United States Treasury FinCEN – Financial Crimes Enforcement Network.
+          </OpenP>
           </FullWidthDiv>
-        </div>
+          </Grid.Column>
+          <Grid.Column>
+          <FullWidthDiv topColor='#ccc' bottomColor='#eee' padTopAndBottom='20px' padLeftAndRight='10%' height='350px'>
+          <OpenP>
+          <Image src={WyomingGray} centered size='tiny' />
+          <br /><br />
+          <strong>Licensed:</strong><br />
+          State of Wyoming Money Transmitter
+          </OpenP>
+          </FullWidthDiv>
+          </Grid.Column>
+          <Grid.Column>
+          <FullWidthDiv topColor='#ccc' bottomColor='#eee' padTopAndBottom='20px' padLeftAndRight='10%' height='350px'>
+          <OpenP>
+          <Image src={BBBGray} centered size='tiny' />
+          <br /><br />
+          <strong>Accredited:</strong><br />
+          Better Business Bureau. BBB Rating A+
+          </OpenP>
+          </FullWidthDiv>
+          </Grid.Column>
+          </Grid.Row>
+          </Grid>
 
-        {/*<HeroHeader bgImage={TopBg}>*/}
-        {/*<Container>*/}
-        {/*<HhInnerContainer>*/}
-        {/*<HhTextContainer>*/}
-        {/*<HhH1>*/}
-        {/*US Gold Currency*/}
-        {/*</HhH1>*/}
-        {/*<HhH3>*/}
-        {/*The convenience of digital money. <br />*/}
-        {/*The security of the blockchain.<br />*/}
-        {/*The stability of gold.*/}
-        {/*</HhH3>*/}
-        {/*</HhTextContainer>*/}
-        {/*<Fade>*/}
-        {/*<HhImageContainer bgImage={USGoldToken} />*/}
-        {/*</Fade>*/}
-        {/*</HhInnerContainer>*/}
-        {/*</Container>*/}
-        {/*</HeroHeader>*/}
+          </Grid.Column>
+          </Grid.Row>
+            </Grid>
+          </Container>
+        </FullWidthDiv> */}
 
+        {/* <FullWidthBgDiv bgImage={BuyKeepRedeem} minHeight='600px' id={7}>
+          <Container>
+            <OpenH3 style={styles.padTop}>
+          Buy it, Hold it, Spend it, Redeem it
+            </OpenH3>
+            <Grid>
+          <Grid.Row>
+          <Grid.Column width={7}>
+          <OpenH4 textAlign='left'>
+          Easy To Buy
+          </OpenH4>
+          <HrOrange />
+          <OpenP textAlign='left'>
+          Purchasing USG tokens is easy. <a href="/register">Create your USG account</a>, confirm your email address, and select the number of USG tokens you would like to buy.
+          </OpenP>
+          <OpenP textAlign='left'>
+          Three forms of payments are currently accepted. 1) Ethereum  (ETH), 2) Bank Wire Transfer (BWT), 3) Visa Debit.
+          </OpenP>
+          <OpenP textAlign='left'>
+          If you need to convert other cryptocurrencies into ETH, please consider <a href='https://shapeshift.io/#/coins' target='_blank' rel='nofollow noreferrer'>ShapeShift</a>.
+          </OpenP>
+          <OpenH4 textAlign='left'>
+          Easy To Redeem
+          </OpenH4>
+          <HrOrange />
+          <OpenP textAlign='left'>
+          Once you have your USG tokens, you can do whatever you want with them: exchange them for other currencies, save them, trade them for goods and services - just like any currency.
+          </OpenP>
+          <OpenP textAlign='left'>
+          Redeeming USG tokens is easy: simply submit a redemption form, and transfer the tokens to the US Gold Currency Ethereum address. Your American Eagle one ounce gold coins are pulled from the gold vault, prepared for shipment, and sent to the verified physical address within your account profile.
+          </OpenP>
+          <OpenP textAlign='left'>
+          All physical gold coins are shipped through United Parcel Service (UPS) – Parcel Pro, and will require a government issued identification with a matching adult signature upon delivery.
+          </OpenP>
+          </Grid.Column>
+          <Grid.Column width={1} />
+          <Grid.Column width={8}>
+          <Img src={PaymentsAccepted} width={300} height={526} marginTop='-65px' />
+          </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+          <Grid.Column>
+          <p>&nbsp;</p>
+          </Grid.Column>
+          </Grid.Row>
+            </Grid>
+          </Container>
+        </FullWidthBgDiv> */}
 
-
-
-
-
-        <Footer/>
+        <Footer />
       </Container>
     );
   }
@@ -275,11 +634,6 @@ const styles = {
   },
   orangeBorder: {
     borderColor: 'orange',
-    borderWidth: '0',
-    borderStyle: 'solid',
-  },
-  greyBorder: {
-    borderColor: '#bababa',
     borderWidth: '0',
     borderStyle: 'solid',
   },
