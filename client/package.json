@@ -65,7 +65,7 @@
     }
   },
   "devDependencies": {
-    "datatables.net": "^1.10.19",
+    "datatables.net": "^1.11.3",
     "jquery": "^3.4.1"
   }
 }
